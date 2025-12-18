@@ -26,11 +26,10 @@ class TabelaFrequencia:
             bins.append(valor)
             labels.append(f'{inicio}-{valor}')
 
-        bin[-1] = lista.max()
+        # bin[-1] = lista.max()
 
         return bins, labels
     
-    @staticmethod
     def dadosAgrupadosPorClasse(self, data, colunaNome):
         lista = data[colunaNome].copy().sort_values()
         regrasturges = self.regraDeSturges(lista.count())
